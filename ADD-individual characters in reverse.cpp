@@ -1,24 +1,20 @@
 #include<stdio.h>
 void printString(char arr[]);
 int main(){
-    char str[1000];
-    fgets(str,1000,stdin);
-    puts(str);
+    char str[100];
+    scanf("%s", str);
+    strrev(str);
+
     printString(str);
     return 0;
 }
 void printString(char arr[]){
-    int length=0;
-    while(arr[length]!=0){
-            length++;
-    }
-    if(arr[length-1]=='\n'){
-        length--;
-    }
-    for(int i=length-1;i>=0;i--){
 
-            printf("%c ", arr[i]);
+    for(int i=0; arr[i]!='\0'; i++){
+
+     printf("%c ",arr[i]);
 
     }
     printf("\n");
+
 }
